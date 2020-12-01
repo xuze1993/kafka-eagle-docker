@@ -1,7 +1,7 @@
 FROM anapsix/alpine-java:8u192b12_jdk
 ENV version=2.0.3
 ENV KE_HOME=/kafka-eagle
-ENV ZKSERVER
+ENV ZKSERVER localhost:2181
 RUN apk update && \
         apk add curl sqlite && \
         curl -OL "https://github.com/smartloli/kafka-eagle-bin/archive/v${version}.tar.gz" && \
